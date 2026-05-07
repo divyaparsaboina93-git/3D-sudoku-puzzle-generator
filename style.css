@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    background: #0a0a0f;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+h1 {
+    color: cyan;
+}
+
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+/* BOARD */
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    width: 360px;
+    margin: 20px auto;
+    transform: rotateX(20deg);
+    gap: 4px;
+}
+
+/* CELLS */
+.cell {
+    width: 38px;
+    height: 38px;
+    background: #111;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    color: cyan;
+    box-shadow: 0 0 8px cyan inset;
+}
+
+.cell:focus {
+    outline: none;
+    box-shadow: 0 0 15px cyan;
+}
+
+.prefilled {
+    background: #0ff2;
+    font-weight: bold;
+}
+
+.wrong {
+    background: red !important;
+}
+
+/* BUTTONS */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background: #111;
+    color: cyan;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px cyan;
+    cursor: pointer;
+}
+
+button:hover {
+    background: cyan;
+    color: black;
+}
+
+/* CELEBRATION */
+#celebration {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+    .board {
+        width: 95vw;
+    }
+
+    .cell {
+        width: 9vw;
+        height: 9vw;
+    }
+}

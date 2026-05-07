@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>3D Sudoku Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>✨ 3D Sudoku</h1>
+
+    <div class="top-bar">
+        <select id="difficulty">
+            <option>Basic</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+        </select>
+
+        <div class="timer">⏱ <span id="timer">0</span>s</div>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <div class="controls">
+        <button onclick="newGame()">New Game</button>
+        <button onclick="check()">Check</button>
+        <button onclick="resetBoard()">Reset</button>
+        <button onclick="hint()">Hint</button>
+    </div>
+
+    <h2>🏆 Leaderboard</h2>
+    <div id="scores"></div>
+
+    <canvas id="celebration"></canvas>
+
+    <audio id="winSound" src="https://www.fesliyanstudios.com/play-mp3/4386"></audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
